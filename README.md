@@ -1,50 +1,11 @@
-# git使用笔记
+# DevNotes
+开发笔记，记录遇到的各种疑难杂症，以及自己实践的心得
+[我的OSChina](https://my.oschina.net/cxy46957)
 
-## 1.git拉去远程分支到本地
-dev为远程分支名  
-``` 
-  git fetch origin dev
-  git checkout -b dev origin/dev 
-```
 
-## 2.push强制覆盖远程分支
-```
-  git push  origin master --force
-  git push -f origin master
-```
+## 目录
 
-## 3.pull强制覆盖本地
-```
-  git fetch --all
-  git reset --hard origin/master
-  git pull
-```
-
-## 4.设置代理
-```
-     git config --global http.proxy socks5://127.0.0.1:1080
-     http_proxy=socks5://127.0.0.1:1080 go get github.com/mattn/go-sqlite3
-     git config --global --unset http.proxy //取消代理
-```
-
-## 5.忽略已被提交的文件 例如xx.log文件
-```
-    git rm --cached xx.log
-    然后修改.gitignore文件，添加此文件
-    git commit -m '添加忽略文件'
-```
-    
-## 6.新建tag，并推到远程仓库
-```
-    git -a v1.0 -m '发布v1.0版本'
-    git push origin v1.0
-    //推送所有
-    git push origin --tags
-```
-
-## 7.push多个远程仓库
-```
-    git remote add gitee addr // gitee为别名，可自定义；addr是仓库地址
-    git remote -v //查看检验
-    git push gitee <branch> //gitee远程仓库别名，branch分支
-```
+- ### [Git笔记](git_note/1.md) 
+- ### [Android](android_note/index.md)
+- ### [Proxy](proxy_note/ss_kcptun.md)
+- ### [linux命令](linux_note/command.md)
